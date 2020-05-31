@@ -3,9 +3,9 @@ local lunajson = require("lunajson")
 local jsonReader = {}
 
 local function read_file(path)
-    local file = io.open(path, "r") -- r read mode and b binary mode
+    local file = io.open(path, "r")
     if not file then return nil end
-    local content = file:read("*a") -- *a or *all reads the whole file
+    local content = file:read("*a")
     file:close()
     return content
 end
