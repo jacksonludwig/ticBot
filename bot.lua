@@ -13,9 +13,9 @@ client:on("ready", function()
 end)
 
 client:on("messageCreate", function(message)
-    if message.content == "!ping" then message.channel:send("Pong!") end
+    if message.content == "%ping" then message.channel:send("Pong!") end
 
-    if message.content == "!reset" then boardMaker.TestPrint(board) end
+    if message.content == "%reset" then boardMaker.TestPrint(board) end
 end)
 
 client:run("Bot " .. TOKEN)
