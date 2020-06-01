@@ -1,17 +1,21 @@
-local discordia = require('discordia')
+local discordia = require("discordia")
 local jsonReader = require("./jsonReader")
+local boardMaker = require("./makeBoard.lua")
 
 local client = discordia.Client()
-local token = jsonReader.ReadToken()
+local TOKEN = jsonReader.ReadToken()
 
-client:on('ready', function()
-	print('Logged in as '.. client.user.username)
+local board
+
+client:on("ready", function()
+    print("Logged in as " .. client.user.username)
+    board = boardMaker.MakeBlankBoard()
 end)
 
-client:on('messageCreate', function(message)
-	if message.content == '!ping' then
-		message.channel:send('Pong!')
-	end
+client:on("messageCreate", function(message)
+    if message.content == "!ping" then message.channel:send("Pong!") end
+
+    if message.content == "!reset" then boardMaker.TestPrint(board) end
 end)
 
-client:run('Bot ' .. token)
+client:run("Bot " .. TOKEN)
