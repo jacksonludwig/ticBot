@@ -1,0 +1,22 @@
+2020-05-31 20:35:07 | [INFO]    | Discordia 2.8.3
+2020-05-31 20:35:07 | [INFO]    | Connecting to Discord...
+2020-05-31 20:35:07 | [ERROR]   | 401 - Unauthorized : GET https://discordapp.com/api/v7/users/@me
+2020-05-31 20:35:07 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2020-05-31 20:35:56 | [INFO]    | Discordia 2.8.3
+2020-05-31 20:35:56 | [INFO]    | Connecting to Discord...
+2020-05-31 20:35:56 | [ERROR]   | 401 - Unauthorized : GET https://discordapp.com/api/v7/users/@me
+2020-05-31 20:35:56 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2020-05-31 20:36:30 | [INFO]    | Discordia 2.8.3
+2020-05-31 20:36:30 | [INFO]    | Connecting to Discord...
+2020-05-31 20:36:30 | [INFO]    | Authenticated as TicBot#7913
+2020-05-31 20:36:30 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-05-31 20:36:31 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-05-31 20:36:31 | [INFO]    | Shard 0 : Received HELLO
+2020-05-31 20:36:31 | [INFO]    | Shard 0 : Received READY
+2020-05-31 20:43:44 | [INFO]    | Discordia 2.8.3
+2020-05-31 20:43:44 | [INFO]    | Connecting to Discord...
+2020-05-31 20:43:44 | [INFO]    | Authenticated as TicBot#7913
+2020-05-31 20:43:44 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-05-31 20:43:44 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-05-31 20:43:44 | [INFO]    | Shard 0 : Received HELLO
+2020-05-31 20:43:44 | [INFO]    | Shard 0 : Received READY
