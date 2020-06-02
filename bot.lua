@@ -16,12 +16,12 @@ client:on("messageCreate", function(message)
 
     if content[1] == "%test" then gameBoard:TestPrint() end
 
-    if content[1] == "%clear" then 
+    if content[1] == "%clear" then
         gameBoard = Board.new()
         message.channel:send(gameBoard:Prettify())
     end
 
-    if content[1] == "%play" then
+    if content[1] == "%play" or content[1] == "%p" then
         if not gameBoard:TakeTurn(content[2], content[3]) then
             message.channel:send(gameBoard.ShowSymError())
         else
