@@ -9,6 +9,7 @@ Notifies about ties and incorrect usage.
 
 ## Usage
 "%play <symbol> <cell>" e.g. "%play X 3". Can also shorten to "%p" and use lowercase symbolsm e.g. "%p o 6".
+  
 "%clear" to reset board.
 
 ###
