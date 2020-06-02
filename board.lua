@@ -1,7 +1,7 @@
 local Board = {}
 Board.__index = Board
 
-local magicSquare = {4, 9, 2, 3, 5, 7, 8, 1, 6}
+local MAGIC_SQUARE = {4, 9, 2, 3, 5, 7, 8, 1, 6}
 
 local function new()
     local self = {1, 2, 3, 4, 5, 6, 7, 8, 9}
@@ -23,7 +23,7 @@ local function isWon(board, symbol)
                 if i ~= j and i ~= k and j ~= k then
                     if board[i] == symbol and board[j] == symbol and board[k] ==
                         symbol then
-                        if magicSquare[i] + magicSquare[j] + magicSquare[k] ==
+                        if MAGIC_SQUARE[i] + MAGIC_SQUARE[j] + MAGIC_SQUARE[k] ==
                             15 then return true end
                     end
                 end
