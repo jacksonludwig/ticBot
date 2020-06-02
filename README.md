@@ -2,7 +2,9 @@
 tic-tac-toe discord bot in lua
 
 ## Details
-Checks wins using Magic Square algorithm: https://mathworld.wolfram.com/MagicSquare.html
+Checks wins using Magic Square algorithm: 
+https://mathworld.wolfram.com/MagicSquare.html
+
 Notifies about ties and incorrect usage.
 
 ## Usage
