@@ -40,7 +40,7 @@ function Board:TestPrint()
     print(self[7] .. " | " .. self[8] .. " | " .. self[9])
 end
 
-function Board.ShowSymError()
+function Board.ShowError()
     return "```\n" .. "Only use \"X\" or \"O\" and numbers 1-9" .. "\n```"
 end
 

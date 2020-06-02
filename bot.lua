@@ -23,7 +23,7 @@ client:on("messageCreate", function(message)
 
     if content[1] == "%play" or content[1] == "%p" then
         if not gameBoard:TakeTurn(content[2], content[3]) then
-            message.channel:send(gameBoard.ShowSymError())
+            message.channel:send(gameBoard.ShowError())
         else
             message.channel:send(gameBoard:Prettify())
         end
