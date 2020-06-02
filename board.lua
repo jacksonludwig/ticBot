@@ -19,6 +19,7 @@ function Board:TakeTurn(symbol, position)
     if type(tonumber(position)) ~= "number" then return false end
 
     position = tonumber(position)
+    symbol = string.upper(symbol)
     if not isSymbolOkay(symbol) or not isPosOkay(position) or
         isSpotTaken(self, position) then return false end
 
