@@ -13,7 +13,6 @@ client:on("ready", function() print("Logged in as " .. client.user.username) end
 
 client:on("messageCreate", function(message)
     local content = utils.SplitMessage(message.content)
-    if content[1] == "%ping" then message.channel:send("Pong!") end
 
     if content[1] == "%test" then gameBoard:TestPrint() end
 
