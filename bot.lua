@@ -26,6 +26,15 @@ client:on("messageCreate", function(message)
             message.channel:send(gameBoard.ShowError())
         else
             message.channel:send(gameBoard:Prettify())
+
+            local endCheck = gameBoard:CheckWinner()
+            if endCheck == "X" then
+                message.channel:send(gameBoard.ShowWin("X"))
+            elseif endCheck == "O" then
+                message.channel:send(gameBoard.ShowWin("O"))
+            elseif endCheck == "Tied" then
+                message.channel:send(gameBoard.ShowTie())
+            end
         end
     end
 end)
