@@ -15,8 +15,8 @@ local function isSpotTaken(board, position)
 end
 
 function Board:TakeTurn(symbol, position)
-    assert(type(symbol) == "string", "symbol must be X or O")
-    assert(type(tonumber(position)) == "number", "pos must be a number 1-9")
+    if type(symbol) ~= "string" then return false end
+    if type(tonumber(position)) ~= "number" then return false end
 
     position = tonumber(position)
     if not isSymbolOkay(symbol) or not isPosOkay(position) or
@@ -26,10 +26,22 @@ function Board:TakeTurn(symbol, position)
     return true
 end
 
+function Board:Prettify()
+    local message = self[1] .. " | " .. self[2] .. " | " .. self[3] .. "\n" ..
+                        self[4] .. " | " .. self[5] .. " | " .. self[6] .. "\n" ..
+                        self[7] .. " | " .. self[8] .. " | " .. self[9]
+
+    return "```\n" .. message .. "\n```"
+end
+
 function Board:TestPrint()
     print(self[1] .. " | " .. self[2] .. " | " .. self[3])
     print(self[4] .. " | " .. self[5] .. " | " .. self[6])
     print(self[7] .. " | " .. self[8] .. " | " .. self[9])
+end
+
+function Board.ShowSymError()
+    return "```\n" .. "Only use \"X\" or \"O\" and numbers 1-9" .. "\n```"
 end
 
 return {new = new, __object = Board}
