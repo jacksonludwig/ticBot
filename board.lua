@@ -74,7 +74,9 @@ function Board:TestPrint()
 end
 
 function Board.ShowError()
-    return "```\n" .. "Only use \"X\" or \"O\" and numbers 1-9" .. "\n```"
+    return
+        "```\n" .. "Only use \"X\" or \"O\" and numbers 1-9. Don't Repeat." ..
+            "\n```"
 end
 
 function Board.ShowWin(symbol) return "```\n" .. symbol .. " wins" .. "\n```" end
